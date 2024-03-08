@@ -1,9 +1,4 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Naeve Ag Production</title>
@@ -14,6 +9,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -22,7 +18,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html">Naeve<br/>Ag Production</a></h1>
+						<h1><a href="index.html">Naeve Ag Production</a></h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -34,12 +30,11 @@
 							<h2>Menu</h2>
 							<ul class="links">
 								<li><a href="index.html">Home</a></li>
-								<li><a href="generic.html">About Us</a></li>
-								<li><a href="#">Custom Operations</a></li>
-								<li><a href="#">Employment Opportunities</a></li>
-								<li><a href="#">Photo Gallery</a></li>
-								<li><a href="#">Real Estate Sales & Appraisal</a></li>
-								<li><a href="elements.html">Contact</a></li>
+								<li><a href="about-us.html">About Us</a></li>
+								<li><a href="custom-operations.html">Custom Operations</a></li>
+								<li><a href="real-estate-sales-appraisal.html">Real Estate Sales & Appraisal</a></li>
+								<li><a href="photo-gallery.html">Photo Gallery</a></li>
+								<li><a href="index.html#footer">Contact</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
@@ -49,7 +44,7 @@
 					<section id="banner">
 						<div class="inner">
 							<div class="logo">
-								<img class='letter' src="images/logo_letter.png"/>
+								<img class='letter' src="images/logo_letter.png" style="filter:brightness(1.2)"/>
 								<img class='shadows' src="images/logo_shadows.png"/>
 							</div>
 							<h2>Naeve Ag Production</h2>
@@ -61,69 +56,80 @@
 					<section id="wrapper">
 
 						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
+							<section id="one" class="wrapper spotlight styleone">
+								<svg class='triangle top' xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,100 100,0 100,100"/></svg>
 								<div class="inner">
-									<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+									<!-- <a href="#" class="image"><img src="images/aboutus.jpg" alt="" /></a> -->
+									<a class="slider">
+										<swiper-container class="mySwiper" pagination="true" speed="500" autoplay="true" effect="cube" grab-cursor="true" cube-effect-shadow="false"
+										cube-effect-slide-shadows="false" >
+											<swiper-slide>
+												<img src="images/kidsontractor.jpg" />
+											</swiper-slide>
+											<swiper-slide>
+												<img src="images/thad.jpg" />
+											</swiper-slide>
+											<swiper-slide>
+												<img src="images/aboutus.jpg" />
+											</swiper-slide>
+											<swiper-slide>
+												<img src="images/aboutus.jpg" />
+											</swiper-slide>
+										</swiper-container>
+									</a>
+
 									<div class="content">
 										<h2 class="major">About Us</h2>
 										<p>Naeve Ag Production is a partnership of fourth generation Iowa family farmers.  The principal crops nurtured on our farms include corn, seed corn and soybeans.  We also install and maintain conservation practices for the protection of wildlife and natural resources. We believe it is our role to care for the land and preserve it for future generations.</p>
 										<a href="#" class="special">Learn more</a>
 									</div>
 								</div>
+								<svg class='triangle bottom' xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,100 100,0 100,100"/></svg>
 							</section>
 
 						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
+							<section id="four" class="wrapper alt styletwo">
+								<svg class='triangle top' xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,100 100,0 100,100"/></svg>
 								<div class="inner">
-									<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Custom Operations</h2>
-										<p>We offer; Planting, Custom Land Rolling, Custom spraying, detasseling, (Roller puller), seed corn harvest, Corn/Soybean harvest, tillage, and tiling.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Real Estate & Appraisals</h2>
-										<p>Thad Naeve provides appraisal and real estate services for local clients. He holds a certified General Real Property Appraiser license and a Real Estate Sales License.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Four -->
-							<section id="four" class="wrapper alt style1">
-								<div class="inner">
-									<h2 class="major">Employment</h2>
-									<p>We are always seeking experienced seasonal help for our custom operations. Contact us for an employment application.</p>
+									<h2 class="major">Services</h2>
+									<p></p>
 									<section class="features">
 										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="image"><img src="images/customoperations.jpg" alt="" /></a>
+											<h3 class="major">Custom Operations</h3>
+											<p style="margin:0 0 0.5em 0">We offer a variety of skilled operations, including:</p>
+											<div class="services">
+												<ul style="margin:0 0 0 0;">
+													<li>Planting</li>
+													<li>Custom Land Rolling</li>
+													<li>Custom spraying</li>
+													<li>Detasseling (Roller puller)</li>
+												</ul>
+												<ul style="margin:0 0 0 0;">
+													<li>Seed Corn Harvest</li>
+													<li>Corn/Soybean Harvest</li>
+													<li>Tillage</li>
+													<li>Tilling</li>
+												</ul>
+											</div>
 											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="image"><img src="images/realestate.jpg" alt="" /></a>
+											<h3 class="major">Real Estate & Appraisals</h3>
+											<p>Thad Naeve provides appraisal and real estate services for local clients. He holds a certified General Real Property Appraiser license and a Real Estate Sales License.</p>
 											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3 class="major">Ante fermentum</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
+											<a href="#" class="image"><img src="images/employment.jpg" alt="" /></a>
+											<h3 class="major">Employment</h3>
+											<p>We are always seeking experienced seasonal help for our custom operations. Contact us for an employment application.</p>
+											<a href="#footer" class="special">Contact Us</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<h3 class="major">Fusce consequat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="image"><img src="images/loadingredwithcorn.jpg" alt="" /></a>
+											<h3 class="major">Photo Gallery</h3>
+											<p>Check out our gallery to see what we've been up to.</p>
 											<a href="#" class="special">Learn more</a>
 										</article>
 									</section>
@@ -131,6 +137,7 @@
 										<li><a href="#" class="button">Browse All</a></li>
 									</ul>
 								</div>
+								<svg class='triangle bottom' xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,100 100,0 100,100"/></svg>
 							</section>
 
 					</section>
@@ -138,8 +145,7 @@
 				<!-- Footer -->
 					<section id="footer">
 						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<h2 class="major">Contact Us</h2>
 							<form method="post" action="#">
 								<div class="fields">
 									<div class="field">
@@ -161,18 +167,20 @@
 							</form>
 							<ul class="contact">
 								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
+									<a href="https://maps.app.goo.gl/12m1NtVSeDSBdmtR8">Naeve Ag Production<br />
+									1874 270th St<br />
+									Humboldt, IA 50548</a>
 								</li>
-								<li class="icon solid fa-phone">(000) 000-0000</li>
-								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+								<li class="icon solid fa-phone">Thad<br/><a href='tel:+15153680773'>(515) 368-0773</a></li>
+								<li class="icon solid fa-phone">Brent<br/><a href='tel:+15153680345'>(515) 368-0345</a></li>
+								<li class="icon solid fa-envelope"><a href="mailto:tnaeve@hughes.net">tnaeve@hughes.net</a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>Copyright &copy; <span id="copyright-year">2024</span> All Rights Reserved</li>
+								<script>
+									const currentYear = new Date().getFullYear();
+									document.getElementById('copyright-year').textContent = currentYear;
+								</script>
 							</ul>
 						</div>
 					</section>
