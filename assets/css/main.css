@@ -19,6 +19,7 @@
 	--style-spotlight: #898121;
 	--style-one : #FDA403;
 	--style-two : #FDA403;
+	--style-three : #5d1116;
 	--article-color : #E8751A;
 
 	--form-background : rgba(217, 217, 255, 0.336);
@@ -47,13 +48,50 @@
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23FDA403%3B' /%3E%3C/svg%3E");
 }
 .wrapper.style3:before, .wrapper.style3:after {
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23%3B' /%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%235d1116%3B' /%3E%3C/svg%3E");
 }
 .wrapper.style4:before, .wrapper.style4:after {
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23%3B' /%3E%3C/svg%3E");
 }
 .wrapper.style5:before, .wrapper.style5:after {
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23%3B' /%3E%3C/svg%3E");
+}
+/* Photo Gallery */
+body.gallery{
+	.gallery{
+		display:grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-auto-flow: row;
+		gap:1em;
+		padding:1em;
+		.image{
+			grid-column: span 1;
+			transition:opacity 600ms linear;
+			img{
+				width:100%;
+				height:100%;
+				object-fit: contain;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+@media screen and (min-width:1280px) {
+	body.gallery{
+		.wrapper.gallery{
+			background:transparent;
+		}
+	}
+}
+
+@media screen and (max-width:768px) {
+	body.gallery{
+		.gallery{
+			grid-template-columns: 1fr 1fr;
+			padding:2em 1em;
+		}
+	}
 }
 
 /* Real Estate */
