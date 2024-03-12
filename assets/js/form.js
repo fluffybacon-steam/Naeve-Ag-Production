@@ -46,3 +46,10 @@ function hideStatus(event){
 
 form.addEventListener("submit", handleSubmit);
 statusBox.addEventListener("click", hideStatus);
+
+document.addEventListener('DOMContentLoaded', function () {
+    var mySwiper = document.querySelector('.mySwiper');
+    console.log('myswioer',mySwiper.swiper);
+    mySwiper.style.width = '300px';
+    mySwiper.style.width = '';
+});
