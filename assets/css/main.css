@@ -66,7 +66,7 @@ body.gallery{
 		padding:1em;
 		.image{
 			grid-column: span 1;
-			transition:opacity 600ms linear;
+			transition:opacity 300ms linear;
 			img{
 				width:100%;
 				height:100%;
@@ -75,6 +75,30 @@ body.gallery{
 			}
 		}
 	}
+
+	.lightbox{
+		inset:0 0 0 0;
+		position: fixed;
+		justify-content: center;
+		align-items: center;
+		display:none;
+		background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+		figure{
+			padding:0 1em;
+		}
+	}
+	.lightbox.active{
+		display:flex;
+		img:hover {
+			cursor: zoom-out;
+		}
+	}
+	.lightbox img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+
 }
 
 @media screen and (min-width:1280px) {
@@ -99,11 +123,20 @@ body.realestate{
 	#banner p{
 		text-transform:none;
 	}
+	#footer{
+		.inner{
+			padding:0 2em;
+		}
+	}
 }
 
 @media screen and (max-width:1280px) {
 	body.realestate #footer{
 		background-image:none;
+		background:#5d1116;
+		.inner{
+			padding:1em 2em;
+		}
 	}
 }
 
