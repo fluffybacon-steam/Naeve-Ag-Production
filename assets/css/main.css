@@ -77,6 +77,7 @@ body.gallery{
 	}
 
 	.lightbox{
+		z-index: 1;
 		inset:0 0 0 0;
 		position: fixed;
 		justify-content: center;
@@ -85,6 +86,22 @@ body.gallery{
 		background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black */
 		figure{
 			padding:0 1em;
+		}
+		button{
+			--button-active : white;
+			border:none;
+			box-shadow:none;
+			padding:0;
+			width:50px;
+			height:50px;
+			svg{
+				width:100%;
+				height:100%;
+			}
+			
+		}
+		button.prev{
+			transform:scaleX(-1);
 		}
 	}
 	.lightbox.active{
@@ -114,6 +131,18 @@ body.gallery{
 		.gallery{
 			grid-template-columns: 1fr 1fr;
 			padding:2em 1em;
+		}
+		.lightbox{
+			button{
+				position: absolute;
+				bottom:25%;
+			}
+			button.prev{
+				left:10%;
+			}
+			button.next{
+				right:10%;
+			}
 		}
 	}
 }
@@ -3572,12 +3601,12 @@ input, select, textarea {
 			transform: translateY(0);
 			opacity: 1;
 			margin: 0 0 1.3em 0;
-			width:72px;
+			width:100%;
 			height:72px;
 			position: relative;
 		}
 		
-			#banner .logo img {
+			#banner .logo img.letter, #banner .logo img.shadows {
 				-moz-transition: height 1s ease-out, opacity 1s linear, -moz-transform 1s linear;
 				-webkit-transition: height 1s ease-out, opacity 1s linear, -webkit-transform 1s linear;
 				-ms-transition: height 1s ease-out, opacity 1s linear, -ms-transform 1s linear;
@@ -3595,6 +3624,18 @@ input, select, textarea {
 				line-height: 2.25em;
 				text-align: center;
 				width: 2.25em;
+			}
+			#banner .logo img.text{
+				height:80.5px;
+				top:0.5px;
+				left:75px;
+				transform: skewX(0deg);
+				position: absolute;
+				-moz-transition: left 500ms ease-out, opacity 500ms linear, transform 700ms ease-out;
+				-webkit-transition: left 500ms ease-out, opacity 500ms linear, transform 700ms ease-out;
+				-ms-transition: left 500ms ease-out, opacity 500ms linear, transform 700ms ease-out;
+				transition: left 500ms ease-out, opacity 500ms linear, transform 700ms ease-out;
+				transition-delay: 500ms;
 			}
 
 		#banner h2 {
@@ -3701,7 +3742,7 @@ input, select, textarea {
 
 		}
 
-		body.is-preload #banner .logo {
+		body.is-preload #banner .logo img.shadows,body.is-preload #banner .logo img.letter {
 			-moz-transform: translateY(-1em);
 			-webkit-transform: translateY(-1em);
 			-ms-transform: translateY(-1em);
@@ -3712,6 +3753,12 @@ input, select, textarea {
 		body.is-preload #banner .logo img.shadows{
 			height:0px;
 			opacity:0;
+		}
+
+		body.is-preload #banner .logo img.text{
+			left:90px;
+			opacity: 0;
+			transform: skewX(-3deg);
 		}
 
 		body.is-preload #banner h2 {
