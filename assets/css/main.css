@@ -135,7 +135,9 @@ body.gallery{
 		.lightbox{
 			button{
 				position: absolute;
-				bottom:25%;
+				bottom:50px;
+				width:100px;
+				height:100px;
 			}
 			button.prev{
 				left:10%;
