@@ -3774,7 +3774,7 @@ input, select, textarea {
 		}
 
 		body.is-preload #banner .logo img.text{
-			left:90px;
+			left:200%;
 			opacity: 0;
 			transform: skewX(-3deg);
 		}
