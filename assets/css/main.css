@@ -31,6 +31,9 @@
 	--swiper-pagination-bullet-inactive-color: white;
 	--swiper-pagination-color: radial-gradient(#898121 50%,white 51%);
 	--swiper-pagination-bullet-inactive-opacity: 1;
+
+	--logo-height : 72px;
+	--logo-width : 99px;
 }
 
 /* Home */
@@ -64,6 +67,7 @@ body.gallery{
 		grid-auto-flow: row;
 		gap:1em;
 		padding:1em;
+		min-height: 50vh;
 		.image{
 			grid-column: span 1;
 			transition:opacity 300ms linear;
@@ -74,6 +78,9 @@ body.gallery{
 				cursor: pointer;
 			}
 		}
+	}
+	.gallery:empty{
+		background:red;
 	}
 
 	.lightbox{
@@ -86,13 +93,25 @@ body.gallery{
 		background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black */
 		figure{
 			padding:0 1em;
+			flex-basis: 100%;
+			img{
+				margin:auto;
+				max-width: 100%;
+				max-height: 75vh;
+				height: auto;
+				display: block;
+			}
+			figcaption{
+				text-align: center;
+			}
 		}
 		button{
 			--button-active : white;
 			border:none;
 			box-shadow:none;
 			padding:0;
-			width:50px;
+			flex-basis: 20%;
+			flex-shrink: 1;
 			height:50px;
 			svg{
 				width:100%;
@@ -107,13 +126,8 @@ body.gallery{
 	.lightbox.active{
 		display:flex;
 		img:hover {
-			cursor: zoom-out;
+			/* cursor: zoom-in; */
 		}
-	}
-	.lightbox img {
-		max-width: 100%;
-		height: auto;
-		display: block;
 	}
 
 }
@@ -443,13 +457,15 @@ input, select, textarea {
 		a.special:not(.button) {
 			text-decoration: none;
 			border-bottom: 0;
-			display: block;
+			/* display: block; */
 			font-family: var(--primary-font), Helvetica, sans-serif;
-			font-size: 0.8em;
+			font-size: 0.9em;
 			font-weight: 700;
 			letter-spacing: 0.1em;
 			margin: 0 0 2em 0;
 			text-transform: uppercase;
+			display:flex;
+			align-items: center;
 		}
 
 			a.special:not(.button):before {
@@ -466,15 +482,15 @@ input, select, textarea {
 			}
 
 			a.special:not(.button):before {
-				-moz-transition: background-color 0.2s ease-in-out;
-				-webkit-transition: background-color 0.2s ease-in-out;
-				-ms-transition: background-color 0.2s ease-in-out;
-				transition: background-color 0.2s ease-in-out;
+				-moz-transition: background-color 0.2s ease-in-out, transform 0.2s linear;
+				-webkit-transition: background-color 0.2s ease-in-out, transform 0.2s linear;
+				-ms-transition: background-color 0.2s ease-in-out, transform 0.2s linear;
+				transition: background-color 0.2s ease-in-out, transform 0.2s linear;
 				border-radius: 100%;
 				border: solid 2px rgba(255, 255, 255, 0.125);
 				content: '\f105';
 				display: inline-block;
-				font-size: 1.25em;
+				font-size: 0.9em;
 				height: 2em;
 				line-height: 1.75em;
 				margin-right: 0.85em;
@@ -486,6 +502,7 @@ input, select, textarea {
 
 			a.special:not(.button):hover:before {
 				background-color: rgba(255, 255, 255, 0.025);
+				transform:translateX(5px);
 			}
 
 			a.special:not(.button):active:before {
@@ -3603,7 +3620,7 @@ input, select, textarea {
 			transform: translateY(0);
 			opacity: 1;
 			margin: 0 0 1.3em 0;
-			width:100%;
+			width:99px;
 			height:72px;
 			position: relative;
 		}
@@ -3622,15 +3639,14 @@ input, select, textarea {
 				cursor: default;
 				display: inline-block;
 				font-size: 2em;
-				height: 2.25em;
-				line-height: 2.25em;
+				height: var(--logo-height);
 				text-align: center;
-				width: 2.25em;
+				width: var(--logo-width);
 			}
 			#banner .logo img.text{
 				height:80.5px;
 				top:0.5px;
-				left:75px;
+				left:100%;
 				transform: skewX(0deg);
 				position: absolute;
 				-moz-transition: left 500ms ease-out, opacity 500ms linear, transform 700ms ease-out;
@@ -3649,10 +3665,10 @@ input, select, textarea {
 			-webkit-transform: translateX(0);
 			-ms-transform: translateX(0);
 			transform: translateX(0);
-			-moz-transition-delay: 0.65s;
-			-webkit-transition-delay: 0.65s;
-			-ms-transition-delay: 0.65s;
-			transition-delay: 0.65s;
+			-moz-transition-delay: 0.8s;
+			-webkit-transition-delay: 0.8s;
+			-ms-transition-delay: 0.8s;
+			transition-delay: 0.8s;
 			-moz-filter: blur(0);
 			-webkit-filter: blur(0);
 			-ms-filter: blur(0);
@@ -3673,10 +3689,10 @@ input, select, textarea {
 			-webkit-transform: translateX(0);
 			-ms-transform: translateX(0);
 			transform: translateX(0);
-			-moz-transition-delay: 0.8s;
-			-webkit-transition-delay: 0.8s;
-			-ms-transition-delay: 0.8s;
-			transition-delay: 0.8s;
+			-moz-transition-delay: 1s;
+			-webkit-transition-delay: 1s;
+			-ms-transition-delay: 1s;
+			transition-delay: 1s;
 			-moz-filter: blur(0);
 			-webkit-filter: blur(0);
 			-ms-filter: blur(0);

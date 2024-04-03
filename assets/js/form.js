@@ -3,12 +3,8 @@ var statusBox = document.querySelector("#my-form-status");
 
 async function handleSubmit(event) {
     event.preventDefault();
-    console.log(event);
     var data = new FormData(event.target);
     var statusText = statusBox.querySelector('div');
-    console.log('handeSubmit');
-    console.log('method',form.method);
-    console.log('data',data);
     fetch(form.action, {
         method: form.method,
         body: data,
@@ -35,8 +31,6 @@ async function handleSubmit(event) {
     });
 }
 function hideStatus(event){
-    console.log("click");
-    console.log( event.target)
     if (event.target.querySelector('div')){
         event.target.querySelector('div').innerHTML = '';
     } else {
